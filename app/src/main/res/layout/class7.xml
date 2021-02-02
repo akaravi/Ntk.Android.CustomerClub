@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#94121212"
     android:orientation="vertical">
 
-    <include layout="@layout/app_toolbar_back" />
 
     <com.nipunbirla.swipe3drotateview.Swipe3DRotateView
         android:id="@+id/rotateView"
@@ -17,15 +17,15 @@
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:layout_gravity="center"
-            android:layout_margin="16dp"      app:cardElevation="16dp"
-            app:cardCornerRadius="32dp"
-            app:strokeColor="@color/colorPrimaryDark"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/transparent"
             app:strokeWidth="2dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:background="@drawable/clupcardback"
                 android:orientation="vertical"
                 android:padding="8dp">
 
@@ -57,30 +57,26 @@
             android:layout_height="230dp"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            app:cardElevation="16dp"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardCornerRadius="32dp"
-            app:strokeColor="@color/colorPrimaryDark"
-            app:strokeWidth="2dp">
+           app:cardBackgroundColor="@color/transparent"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
+                android:gravity="center"        android:background="@drawable/clupcard"
                 android:orientation="vertical"
                 android:padding="8dp">
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:src="@drawable/person" />
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:text="محمد جواد کریمی"
                     android:textColor="@color/colorWhite"
                     android:textSize="18sp" />
             </LinearLayout>

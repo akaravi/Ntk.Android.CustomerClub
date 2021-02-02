@@ -68,7 +68,7 @@
         <activity android:name=".activity.Class4" />
         <activity android:name=".activity.Class5" />
         <activity android:name=".activity.Class6" />
-        <activity android:name=".activity.Class7" />
+        <activity android:name=".activity.Class7"  android:theme="@style/AppTheme.Translucent" />
 
 
         <!--        <provider-->

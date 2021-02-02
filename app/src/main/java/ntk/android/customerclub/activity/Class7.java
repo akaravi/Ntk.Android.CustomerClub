@@ -34,7 +34,7 @@ public class Class7 extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.class7);
-        ((TextView) findViewById(R.id.txtToolbar)).setText(getString(R.string.mainCard7));
+//        ((TextView) findViewById(R.id.txtToolbar)).setText(getString(R.string.mainCard7));
         String qrCode = Preferences.with(this).appVariableInfo().qrCode();
         QRGEncoder qrgEncoder = new QRGEncoder(qrCode, null, QRGContents.Type.TEXT, 300);
         try {
