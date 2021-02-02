@@ -124,6 +124,35 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:893852902485:android:cded152488ded462d2e0dc",
+        "android_client_info": {
+          "package_name": "ntk.android.customerclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893852902485-2ueq70m43of0nqrnmhc7nellvcv2nsbj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCebGPsbhfoLJVBrZITvXqLlvgwWsk1PyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893852902485-2ueq70m43of0nqrnmhc7nellvcv2nsbj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:893852902485:android:fec7a65cbf64a700",
         "android_client_info": {
           "package_name": "ntk.android.estate"
@@ -155,7 +184,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:893852902485:android:15ed31a68d278ecbd2e0dc",
         "android_client_info": {
-          "package_name": "ntk.android.customerclub.APPNTK"
+          "package_name": "ntk.android.financialfund"
         }
       },
       "oauth_client": [
