@@ -5,8 +5,8 @@
     <string name="mainCard2">انتقال سپرده به سپرده</string>
     <string name="mainCard3">پرداخت اقساط از کارت</string>
     <string name="mainCard4">پرداخت اقساط از سپرده</string>
-    <string name="mainCard5">درخواست نوبت وام</string>
-    <string name="mainCard6">گزارش اقساط وام</string>
-    <string name="mainCard7">گزارشات گردش سپرده</string>
+    <string name="mainCard5">گزارش حساب</string>
+    <string name="mainCard6">گزارش بن</string>
+    <string name="mainCard7">بن شما</string>
 
 </resources>

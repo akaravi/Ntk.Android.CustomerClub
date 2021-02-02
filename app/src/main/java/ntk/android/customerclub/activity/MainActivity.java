@@ -50,10 +50,6 @@ import ntk.android.customerclub.event.toolbar.EVSearchClick;
 public class MainActivity extends AbstractMainActivity {
 
     @BindViews({
-            R.id.txtCard1,
-            R.id.txtCard2,
-            R.id.txtCard3,
-            R.id.txtCard4,
             R.id.txtCard5,
             R.id.txtCard6,
             R.id.txtCard7,
@@ -70,10 +66,7 @@ public class MainActivity extends AbstractMainActivity {
             R.id.search})
     List<TextView> lbl;
 
-    @BindViews({R.id.mainCard1,
-            R.id.mainCard2,
-            R.id.mainCard3,
-            R.id.mainCard4,
+    @BindViews({
             R.id.mainCard5,
             R.id.mainCard6,
             R.id.mainCard7,
@@ -203,26 +196,6 @@ public class MainActivity extends AbstractMainActivity {
                     public void onError(Throwable e) {
                     }
                 });
-    }
-
-    @OnClick(R.id.mainCard1)
-    public void oncard1() {
-        this.startActivity(new Intent(this, Class1.class));
-    }
-
-    @OnClick(R.id.mainCard2)
-    public void oncard2() {
-        this.startActivity(new Intent(this, Class2.class));
-    }
-
-    @OnClick(R.id.mainCard3)
-    public void oncard3() {
-        this.startActivity(new Intent(this, Class3.class));
-    }
-
-    @OnClick(R.id.mainCard4)
-    public void oncard4() {
-        this.startActivity(new Intent(this, Class4.class));
     }
 
     @OnClick(R.id.mainCard5)

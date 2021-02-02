@@ -7,79 +7,12 @@
     android:paddingRight="4dp"
     android:weightSum="2.25">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.25"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="1">
 
-
-        <LinearLayout
-            android:id="@+id/mainCard2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:layout_weight="0.5"
-            android:background="@drawable/main_btn_background_dark"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:weightSum="1">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-
-                android:layout_weight="0.6"
-                android:src="@drawable/search" />
-
-            <TextView
-                android:id="@+id/txtCard2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/mainCard2"
-                android:textColor="#000"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/mainCard1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:layout_weight="0.5"
-            android:background="@drawable/main_btn_background_dark"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-
-            <TextView
-                android:id="@+id/txtCard1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.45"
-                android:gravity="center"
-                android:text="@string/mainCard1"
-                android:textColor="#000"
-                android:textSize="17sp" />
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_weight="0.25"
-                android:src="@drawable/support" />
-        </LinearLayout>
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".5"
+        android:layout_weight=".35"
         android:orientation="horizontal"
         android:weightSum="1">
 
@@ -89,34 +22,6 @@
             android:layout_weight=".5"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/mainCard4"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/main_btn_background_dark"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="0.6"
-                    android:src="@drawable/question" />
-
-                <TextView
-                    android:id="@+id/txtCard4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.35"
-                    android:gravity="center"
-                    android:text="@string/mainCard4"
-                    android:textColor="#000"
-                    android:textSize="17sp" />
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/mainCard6"
@@ -154,35 +59,6 @@
             android:layout_weight=".5"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/mainCard3"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/main_btn_background_dark"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="0.6"
-                    android:src="@drawable/question" />
-
-                <TextView
-                    android:id="@+id/txtCard3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.35"
-                    android:gravity="center"
-                    android:text="@string/mainCard3"
-
-                    android:textColor="#000"
-                    android:textSize="17sp" />
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/mainCard5"
