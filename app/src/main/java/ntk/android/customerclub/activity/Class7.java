@@ -64,5 +64,5 @@ public class Class7 extends BaseActivity {
         ((TextView) findViewById(R.id.txt2)).setTypeface(FontManager.T1_Typeface(this));
         ((TextView) findViewById(R.id.txtTitle)).setTypeface(FontManager.GetTypeface(this, "fonts/number7.otf"));
     }
-    
+
 }
