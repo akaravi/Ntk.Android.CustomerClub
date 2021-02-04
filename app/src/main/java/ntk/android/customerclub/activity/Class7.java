@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-
 import com.google.zxing.WriterException;
 
 import androidmads.library.qrgenearator.QRGContents;
@@ -22,12 +21,13 @@ import ntk.android.base.utill.prefrense.Preferences;
 import ntk.android.customerclub.R;
 
 public class Class7 extends BaseActivity {
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.class7);
         initSize();
-        sefont();
+        setFont();
 //        ((TextView) findViewById(R.id.txtToolbar)).setText(getString(R.string.mainCard7));
         String qrCode = Preferences.with(this).appVariableInfo().qrCode();
         QRGEncoder qrgEncoder = new QRGEncoder(qrCode, null, QRGContents.Type.TEXT, 300);
@@ -50,13 +50,13 @@ public class Class7 extends BaseActivity {
         int screenWidth = BaseRecyclerAdapter.getScreenWidth();
         ViewGroup.LayoutParams layoutParams = frameBack.getLayoutParams();
         layoutParams.height = (int) (screenWidth * .65);
-        layoutParams.width = (int) (1.6*screenWidth * .65);
+        layoutParams.width = (int) (1.6 * screenWidth * .65);
         frameBack.setLayoutParams(layoutParams);
         frameFront.setLayoutParams(layoutParams);
 
     }
 
-    private void sefont() {
+    private void setFont() {
         ((TextView) findViewById(R.id.txtStore)).setTypeface(FontManager.T1_BOLD_Typeface(this));
         ((TextView) findViewById(R.id.textCardBack)).setTypeface(FontManager.T1_Typeface(this));
         ((TextView) findViewById(R.id.txt2)).setTypeface(FontManager.T1_Typeface(this));
@@ -64,6 +64,5 @@ public class Class7 extends BaseActivity {
         ((TextView) findViewById(R.id.txt2)).setTypeface(FontManager.T1_Typeface(this));
         ((TextView) findViewById(R.id.txtTitle)).setTypeface(FontManager.GetTypeface(this, "fonts/number7.otf"));
     }
-
-
+    
 }
