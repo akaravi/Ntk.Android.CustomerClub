@@ -18,10 +18,10 @@ import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.customerclub.R;
 import ntk.android.customerclub.adapter.AccountSelectAdapter;
 import ntk.android.customerclub.adapter.LoanSelectAdapter;
-import ntk.android.customerclub.server.model.AccountModel;
-import ntk.android.customerclub.server.model.LoanModel;
-import ntk.android.customerclub.server.service.AccountService;
-import ntk.android.customerclub.server.service.LoanService;
+import ntk.android.customerclub.server.model.PayModel;
+import ntk.android.customerclub.server.model.CardModel;
+import ntk.android.customerclub.server.service.PayService;
+import ntk.android.customerclub.server.service.CardService;
 
 public class Class4 extends BaseActivity {
 
@@ -69,17 +69,17 @@ public class Class4 extends BaseActivity {
 
     private void getAccounts() {
         switcher.showProgressView();
-        ServiceExecute.execute(new AccountService(this).getAll(new FilterModel())).subscribe(new NtkObserver<ErrorException<AccountModel>>() {
+        ServiceExecute.execute(new PayService(this).getAll(new FilterModel())).subscribe(new NtkObserver<ErrorException<PayModel>>() {
             @Override
-            public void onNext(@NonNull ErrorException<AccountModel> accountModelErrorException) {
+            public void onNext(@NonNull ErrorException<PayModel> accountModelErrorException) {
                 switcher.showContentView();
                 AutoCompleteTextView account = (AutoCompleteTextView) findViewById(R.id.etAccountId);
                 TextInputEditText Name = findViewById(R.id.etName);
                 account.setAdapter(new AccountSelectAdapter(Class4.this, accountModelErrorException.ListItems));
                 account.setOnItemClickListener((adapterView, view12, i, l) -> {
                     if (i >= 0) {
-                        account.setText(((AccountModel) adapterView.getItemAtPosition(i)).AccountId);
-                        Name.setText(((AccountModel) adapterView.getItemAtPosition(i)).Name);
+                        account.setText(((PayModel) adapterView.getItemAtPosition(i)).AccountId);
+                        Name.setText(((PayModel) adapterView.getItemAtPosition(i)).Name);
                     } else {
                         account.setText("");
                         Name.setText("");
@@ -96,9 +96,9 @@ public class Class4 extends BaseActivity {
 
     private void getLoans() {
         switcher.showProgressView();
-        ServiceExecute.execute(new LoanService(this).getAll(new FilterModel())).subscribe(new NtkObserver<ErrorException<LoanModel>>() {
+        ServiceExecute.execute(new CardService(this).getAll(new FilterModel())).subscribe(new NtkObserver<ErrorException<CardModel>>() {
             @Override
-            public void onNext(@NonNull ErrorException<LoanModel> accountModelErrorException) {
+            public void onNext(@NonNull ErrorException<CardModel> accountModelErrorException) {
                 switcher.showContentView();
                 AutoCompleteTextView loanEt = (AutoCompleteTextView) findViewById(R.id.etLoan);
                 TextInputEditText Name = findViewById(R.id.etLoanName);
@@ -106,9 +106,9 @@ public class Class4 extends BaseActivity {
                 loanEt.setAdapter(new LoanSelectAdapter(Class4.this, accountModelErrorException.ListItems));
                 loanEt.setOnItemClickListener((adapterView, view12, i, l) -> {
                     if (i >= 0) {
-                        loanEt.setText(((LoanModel) adapterView.getItemAtPosition(i)).Name);
-                        Name.setText(((LoanModel) adapterView.getItemAtPosition(i)).AccountId);
-                        Amount.setText(((LoanModel) adapterView.getItemAtPosition(i)).Amount + "");
+                        loanEt.setText(((CardModel) adapterView.getItemAtPosition(i)).Name);
+                        Name.setText(((CardModel) adapterView.getItemAtPosition(i)).AccountId);
+                        Amount.setText(((CardModel) adapterView.getItemAtPosition(i)).Amount + "");
                     } else {
                         loanEt.setText("");
                         Name.setText("");

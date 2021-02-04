@@ -9,27 +9,27 @@ import io.reactivex.Observable;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.FilterModel;
-import ntk.android.customerclub.server.model.LoanModel;
+import ntk.android.customerclub.server.model.CardModel;
 
-public class LoanService {
+public class CardService {
     private final Map<String, String> headers;
     String baseUrl = "api/v1/";
     String controlerUrl = "service";
     Context context;
 
-    public LoanService(Context context) {
+    public CardService(Context context) {
         this.context = context;
         this.headers = (new ConfigRestHeader()).GetHeaders(context);
     }
 
-    public Observable<ErrorException<LoanModel>> getAll(FilterModel request) {
+    public Observable<ErrorException<CardModel>> getAll(FilterModel request) {
         return Observable.create(emitter -> {
             Thread.sleep(2000);
-            ErrorException<LoanModel> model = new ErrorException<>();
+            ErrorException<CardModel> model = new ErrorException<>();
             model.IsSuccess = true;
             model.ListItems = new ArrayList<>();
             {
-                LoanModel a1 = new LoanModel();
+                CardModel a1 = new CardModel();
                 a1.Name = "وام خرید خودرو";
                 a1.AccountId = "آیدین صلواتی-123456789";
                 a1.Amount = 5000000;
@@ -37,7 +37,7 @@ public class LoanService {
                 model.ListItems.add(a1);
             }
             {
-                LoanModel a1 = new LoanModel();
+                CardModel a1 = new CardModel();
                 a1.Name = "آیدین صلواتی-وام جعاله";
                 a1.AccountId = "آیدین صلواتی-123456789";
                 a1.Amount = 5000000;     a1.payment = 50000;

@@ -2,7 +2,7 @@ package ntk.android.customerclub.server.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class AccountModel {
+public class PayModel {
     @SerializedName("Name")
     public String Name;
     @SerializedName("AccountId")

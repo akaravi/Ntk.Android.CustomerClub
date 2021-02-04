@@ -12,19 +12,19 @@ import androidx.annotation.NonNull;
 import java.util.List;
 
 import ntk.android.customerclub.R;
-import ntk.android.customerclub.server.model.AccountModel;
+import ntk.android.customerclub.server.model.PayModel;
 
-public class AccountSelectAdapter extends ArrayAdapter<AccountModel> {
+public class AccountSelectAdapter extends ArrayAdapter<PayModel> {
 
-    private final List<AccountModel> list;
+    private final List<PayModel> list;
 
-    public AccountSelectAdapter(@NonNull Context context, List<AccountModel> arrayList) {
+    public AccountSelectAdapter(@NonNull Context context, List<PayModel> arrayList) {
         super(context, R.layout.row_account_bank, arrayList);
         list = arrayList;
     }
 
     @Override
-    public AccountModel getItem(int position) {
+    public PayModel getItem(int position) {
         return list.get(position);
     }
 

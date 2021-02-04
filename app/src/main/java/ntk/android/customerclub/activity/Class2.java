@@ -17,8 +17,8 @@ import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.customerclub.R;
 import ntk.android.customerclub.adapter.AccountSelectAdapter;
-import ntk.android.customerclub.server.model.AccountModel;
-import ntk.android.customerclub.server.service.AccountService;
+import ntk.android.customerclub.server.model.PayModel;
+import ntk.android.customerclub.server.service.PayService;
 
 public class Class2 extends BaseActivity {
     @Override
@@ -66,17 +66,17 @@ public class Class2 extends BaseActivity {
 
     private void getAccounts() {
         switcher.showProgressView();
-        ServiceExecute.execute(new AccountService(this).getAll(new FilterModel())).subscribe(new NtkObserver<ErrorException<AccountModel>>() {
+        ServiceExecute.execute(new PayService(this).getAll(new FilterModel())).subscribe(new NtkObserver<ErrorException<PayModel>>() {
             @Override
-            public void onNext(@NonNull ErrorException<AccountModel> accountModelErrorException) {
+            public void onNext(@NonNull ErrorException<PayModel> accountModelErrorException) {
                 switcher.showContentView();
                 AutoCompleteTextView paymentType = (AutoCompleteTextView) findViewById(R.id.etAccountId);
                 TextInputEditText Name = findViewById(R.id.etName);
                 paymentType.setAdapter(new AccountSelectAdapter(Class2.this, accountModelErrorException.ListItems));
                 paymentType.setOnItemClickListener((adapterView, view12, i, l) -> {
                     if (i >= 0) {
-                        paymentType.setText(((AccountModel) adapterView.getItemAtPosition(i)).AccountId);
-                        Name.setText(((AccountModel) adapterView.getItemAtPosition(i)).Name);
+                        paymentType.setText(((PayModel) adapterView.getItemAtPosition(i)).AccountId);
+                        Name.setText(((PayModel) adapterView.getItemAtPosition(i)).Name);
                     } else {
                         paymentType.setText("");
                         Name.setText("");
@@ -93,17 +93,17 @@ public class Class2 extends BaseActivity {
 
     private void getDestinationAccounts() {
         switcher.showProgressView();
-        ServiceExecute.execute(new AccountService(this).getPopularDestinationsAccount(new FilterModel())).subscribe(new NtkObserver<ErrorException<AccountModel>>() {
+        ServiceExecute.execute(new PayService(this).getPopularDestinationsAccount(new FilterModel())).subscribe(new NtkObserver<ErrorException<PayModel>>() {
             @Override
-            public void onNext(@NonNull ErrorException<AccountModel> accountModelErrorException) {
+            public void onNext(@NonNull ErrorException<PayModel> accountModelErrorException) {
                 switcher.showContentView();
                 AutoCompleteTextView paymentType = (AutoCompleteTextView) findViewById(R.id.etAccountDestId);
                 TextInputEditText Name = findViewById(R.id.etDestName);
                 paymentType.setAdapter(new AccountSelectAdapter(Class2.this, accountModelErrorException.ListItems));
                 paymentType.setOnItemClickListener((adapterView, view12, i, l) -> {
                     if (i >= 0) {
-                        paymentType.setText(((AccountModel) adapterView.getItemAtPosition(i)).AccountId);
-                        Name.setText(((AccountModel) adapterView.getItemAtPosition(i)).Name);
+                        paymentType.setText(((PayModel) adapterView.getItemAtPosition(i)).AccountId);
+                        Name.setText(((PayModel) adapterView.getItemAtPosition(i)).Name);
                     } else {
                         paymentType.setText("");
                         Name.setText("");

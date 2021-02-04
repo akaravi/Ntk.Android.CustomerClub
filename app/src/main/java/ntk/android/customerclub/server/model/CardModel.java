@@ -1,6 +1,6 @@
 package ntk.android.customerclub.server.model;
 
-public class LoanModel {
+public class CardModel {
     public String Name;
     public String AccountId;
     public long Amount;

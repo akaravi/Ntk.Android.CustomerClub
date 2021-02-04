@@ -120,8 +120,11 @@ dependencies {
     implementation 'net.sourceforge.streamsupport:android-retrostreams:1.7.2'
    //for flip
     implementation 'com.github.nipun-birla:Swipe3DRotateView:0.0.1'
+    //for datePicker
+    implementation 'com.mohamadamin:persianmaterialdatetimepicker:1.2.1'
     //base of project
     api 'com.github.akaravi:Ntk.Android.BaseActivity:1.4.108'
+
 //
 //
 //    api project(path: ':baseActivity')
