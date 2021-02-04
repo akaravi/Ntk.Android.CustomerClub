@@ -3,19 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#94121212"
+    android:clipChildren="false"
     android:orientation="vertical">
 
 
     <com.nipunbirla.swipe3drotateview.Swipe3DRotateView
         android:id="@+id/rotateView"
         android:layout_width="match_parent"
+
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:rotation="90">
 
 
         <FrameLayout
-            android:layout_width="212dp"
-            android:layout_height="340dp"
+            android:id="@+id/frameBack"
+            android:layout_width="280dp"
+            android:layout_height="176dp"
             android:layout_gravity="center"
             android:layout_margin="16dp">
 
@@ -25,10 +29,12 @@
                 android:background="@drawable/clupcardback">
 
                 <ImageView
+                    android:id="@+id/imgLine"
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:background="#000"
-                    android:layout_below="@+id/textCardBack" />
+                    android:layout_height="30dp"
+
+                    android:layout_below="@+id/textCardBack"
+                    android:background="#000" />
 
 
                 <TextView
@@ -40,16 +46,17 @@
                     android:padding="8dp"
                     android:text="عکس زیر را اسکن کنید"
                     android:textColor="@color/colorWhite"
-                    android:textSize="13sp" />
+                    android:textSize="17sp" />
 
 
                 <ImageView
                     android:id="@+id/qrcodeClass7"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_below="@+id/textCardBack"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_below="@+id/imgLine"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="-10dp"
                     android:layout_weight="1"
                     android:src="@drawable/chip" />
 
@@ -59,8 +66,9 @@
 
 
         <FrameLayout
-            android:layout_width="212dp"
-            android:layout_height="340dp"
+            android:id="@+id/frameFront"
+            android:layout_width="280dp"
+            android:layout_height="176dp"
             android:layout_gravity="center"
             android:layout_margin="16dp">
 
@@ -75,8 +83,8 @@
 
                 <ImageView
                     android:id="@+id/imgLogo"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
@@ -90,7 +98,7 @@
                     android:gravity="center"
                     android:text="مرکز خرید تست"
                     android:textColor="@color/colorWhite"
-                    android:textSize="20sp"
+                    android:textSize="26sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -103,13 +111,23 @@
                     android:padding="8dp"
                     android:text="2312331233523523"
                     android:textColor="@color/colorWhite"
-                    android:textSize="16sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="محمدرضا آیدی"
+                    android:layout_marginRight="16dp"
+                    android:layout_below="@+id/txtTitle"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:id="@+id/imgChip"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_below="@+id/imgLogo"
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
