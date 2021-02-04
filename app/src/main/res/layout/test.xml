@@ -14,8 +14,8 @@
 
 
         <FrameLayout
-            android:layout_width="212dp"
-            android:layout_height="340dp"
+            android:layout_width="280dp"
+            android:layout_height="176dp"
             android:layout_gravity="center"
             android:layout_margin="16dp">
 
@@ -59,8 +59,8 @@
 
 
         <FrameLayout
-            android:layout_width="212dp"
-            android:layout_height="340dp"
+            android:layout_width="280dp"
+            android:layout_height="176dp"
             android:layout_gravity="center"
             android:layout_margin="16dp">
 

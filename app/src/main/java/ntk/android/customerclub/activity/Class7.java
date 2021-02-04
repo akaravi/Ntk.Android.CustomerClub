@@ -4,36 +4,26 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.zxing.WriterException;
 
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
-import es.dmoral.toasty.Toasty;
-import io.reactivex.annotations.NonNull;
 import ntk.android.base.activity.BaseActivity;
-import ntk.android.base.config.NtkObserver;
-import ntk.android.base.config.ServiceExecute;
-import ntk.android.base.entitymodel.base.ErrorException;
-import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.utill.FontManager;
 import ntk.android.base.utill.prefrense.Preferences;
 import ntk.android.customerclub.R;
-import ntk.android.customerclub.adapter.AccountSelectAdapter;
-import ntk.android.customerclub.server.model.AccountModel;
-import ntk.android.customerclub.server.service.AccountService;
 
 public class Class7 extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.class7);
+        sefont();
 //        ((TextView) findViewById(R.id.txtToolbar)).setText(getString(R.string.mainCard7));
         String qrCode = Preferences.with(this).appVariableInfo().qrCode();
         QRGEncoder qrgEncoder = new QRGEncoder(qrCode, null, QRGContents.Type.TEXT, 300);
@@ -48,6 +38,14 @@ public class Class7 extends BaseActivity {
             ImageView img = findViewById(R.id.qrcodeClass7);
             img.setImageBitmap(decodedByte);
         }
+    }
+
+    private void sefont() {
+        ((TextView) findViewById(R.id.txtStore)).setTypeface(FontManager.T1_BOLD_Typeface(this));
+        ((TextView) findViewById(R.id.textCardBack)).setTypeface(FontManager.T1_Typeface(this));
+        ((TextView) findViewById(R.id.txt2)).setTypeface(FontManager.T1_Typeface(this));
+        ((TextView) findViewById(R.id.txt2)).setTypeface(FontManager.T1_Typeface(this));
+        ((TextView) findViewById(R.id.txtTitle)).setTypeface(FontManager.GetTypeface(this, "fonts/number7.otf"));
     }
 
 
