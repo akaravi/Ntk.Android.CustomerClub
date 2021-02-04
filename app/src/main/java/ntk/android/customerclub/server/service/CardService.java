@@ -30,19 +30,33 @@ public class CardService {
             model.ListItems = new ArrayList<>();
             {
                 CardModel a1 = new CardModel();
-                a1.Name = "وام خرید خودرو";
-                a1.AccountId = "آیدین صلواتی-123456789";
-                a1.Amount = 5000000;
-                a1.payment = 50000;
+                a1.Name = "123568679456789";
+                a1.AccountId = "نامحدود";
+                a1.Type = "1399/02/12";
                 model.ListItems.add(a1);
             }
             {
                 CardModel a1 = new CardModel();
-                a1.Name = "آیدین صلواتی-وام جعاله";
-                a1.AccountId = "آیدین صلواتی-123456789";
-                a1.Amount = 5000000;     a1.payment = 50000;
+                a1.Name = "12899993456789";
+                a1.AccountId = "نامحدود";
+                a1.Type = "1399/05/17";
                 model.ListItems.add(a1);
             }
+            {
+                CardModel a1 = new CardModel();
+                a1.Name = "12345355663339";
+                a1.AccountId = "محدود- 2 مرتبه";
+                a1.Type = "1399/05/17";
+                model.ListItems.add(a1);
+            }
+            {
+                CardModel a1 = new CardModel();
+                a1.Name = "66798878456789";
+                a1.AccountId = "محدود- 1 مرتبه";
+                a1.Type = "1399/05/17";
+                model.ListItems.add(a1);
+            }
+
             model.TotalRowCount = 2;
             emitter.onNext(model);
             emitter.onComplete();

@@ -46,7 +46,8 @@ public class Class3 extends BaseActivity {
                     if (i >= 0) {
                         loanEt.setText(((CardModel) adapterView.getItemAtPosition(i)).Name);
                         Name.setText(((CardModel) adapterView.getItemAtPosition(i)).AccountId);
-                        Amount.setText(((CardModel) adapterView.getItemAtPosition(i)).Amount + "");
+                        Amount.setText(((CardModel) adapterView.getItemAtPosition(i))
+                                .Amount + "");
                     } else {
                         loanEt.setText("");
                         Name.setText("");

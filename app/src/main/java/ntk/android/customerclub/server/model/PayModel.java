@@ -7,7 +7,8 @@ public class PayModel {
     public String Name;
     @SerializedName("AccountId")
     public String AccountId;
-     @SerializedName("AccountType")
+    @SerializedName("AccountType")
     public String AccountType;
-
+    @SerializedName("price")
+    public int price;
 }
