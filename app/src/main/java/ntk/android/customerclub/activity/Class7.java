@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+
 import com.google.zxing.WriterException;
 
 import androidmads.library.qrgenearator.QRGContents;
@@ -29,6 +30,7 @@ public class Class7 extends BaseActivity {
         initSize();
         setFont();
 //        ((TextView) findViewById(R.id.txtToolbar)).setText(getString(R.string.mainCard7));
+        ((TextView) findViewById(R.id.txtStore)).setText(getResources().getString(R.string.app_name));
         String qrCode = Preferences.with(this).appVariableInfo().qrCode();
         QRGEncoder qrgEncoder = new QRGEncoder(qrCode, null, QRGContents.Type.TEXT, 300);
         try {
