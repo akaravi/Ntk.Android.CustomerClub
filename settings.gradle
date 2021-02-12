@@ -1,4 +1,4 @@
-include ':app'//club 102 
+include ':app'//club 102
 rootProject.name = "Ntk.Android.CustomerClub"
 //include 'baseActivity'
 //project(':baseActivity').projectDir = new File('..\\Ntk.Android.BaseActivity\\app')
